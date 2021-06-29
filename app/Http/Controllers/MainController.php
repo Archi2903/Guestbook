@@ -8,16 +8,16 @@ class MainController extends Controller
 {
     public function getmain()
     {
-        return view('site.index');
+        return view('index');
     }
 
     public function getabout()
     {
-        return view('site.about');
+        return view('about');
     }
 
     public function getcontact()
     {
-        return view('site.contact');
+        return view('contact');
     }
 }

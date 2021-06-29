@@ -13,8 +13,11 @@
                 <h5 class="mt-0">{{$record->name}}</h5>
                 <p>{{$record->message}}
                 <p class="text-right">{{$record->updated_at}}
-                    <a href="{{route('edit',$record->id)}}">
+                    <a href="{{route('editRecord',$record->id)}}">
                         <button class="btn btn-dark"><i class="bi bi-pencil"></i></button>
+                    </a>
+                    <a href="{{route('deleteRecord',$record->id)}}">
+                        <button class="btn btn-dark"><i class="bi bi-trash-fill"></i></button>
                     </a>
                 </p>
                 </p>

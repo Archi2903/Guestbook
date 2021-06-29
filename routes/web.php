@@ -9,7 +9,8 @@ Route::get('/contact', 'MainController@getcontact')->name('contact');
 
 Route::post('/guestbook/form', 'GuestbookController@createRecord')->name('createRecord');
 
-Route::get('/guestbook/form/{id}/edit', 'GuestbookController@editRecord')->name('edit');
-//Route::post('/guestbook/form', 'GuestbookController@createRecord')->name('createRecord');
+Route::get('/guestbook/form/{id}/edit', 'GuestbookController@editRecord')->name('editRecord');
+Route::post('/guestbook/form/{id}/editform', 'GuestbookController@editFormSub')->name('editSubRecord');
+Route::get('/guestbook/form/{id}/delete', 'GuestbookController@deleteRecord')->name('deleteRecord');
 
 

@@ -4,9 +4,9 @@
 @endsection
 
 @section('main_content')
-    <form class="needs-validation " method="post" action="{{route('about')}}">
+    <form class="needs-validation " method="post" action="{{route('editSubRecord',$record->id)}}">
         @csrf
-        <h1 class="text-center">Edit{{$record->name}}</h1>
+        <h1 class="text-center">Edit {{$record->name}}</h1>
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="name">Name</label>
@@ -25,7 +25,7 @@
         <div class="mb-3">
             <label for="message">Record</label>
             <textarea class="form-control" id="message" name="message" placeholder="Write your record"
-                      required>value="{{$record->message}}"</textarea>
+                      required>{{$record->message}}</textarea>
         </div>
         <button class="btn btn-dark" type="submit">Edit record</button>
     </form>

@@ -3,18 +3,18 @@
     Guestbook
 @endsection
 @section('main_content')
-    {{--    @foreach($records as $record)--}}
-    {{--        <div class="media border">--}}
-    {{--            <img src="https://image.flaticon.com/icons/png/512/1077/1077114.png" style="height:64px "--}}
-    {{--                 class="mr-3 rounded-circle border"--}}
-    {{--                 alt="user-avatar">--}}
-    {{--            <div class="media-body">--}}
-    {{--                <h5 class="mt-0">{{$record->username}}</h5>--}}
-    {{--                <p>{{$record->record}} <p class="text-right">{{$record->updated_at}}</p></p>--}}
-
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    @endforeach--}}
+    @foreach($records as $record)
+        <br>
+        <div class="media border">
+            <img src="https://image.flaticon.com/icons/png/512/1077/1077114.png" style="height:64px "
+                 class="mr-3 rounded-circle border"
+                 alt="user-avatar">
+            <div class="media-body">
+                <h5 class="mt-0">{{$record->name}}</h5>
+                <p>{{$record->message}} <p class="text-right">{{$record->updated_at}}</p></p>
+            </div>
+        </div>
+    @endforeach
     @if(session('success'))
         <div class="alert alert-success">
             {{session('success')}}

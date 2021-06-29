@@ -22,6 +22,6 @@ class GuestbookController extends Controller
     public function getRecords()
     {
         $records= new Record;
-        return view('index',['record'=>$records]);
+        return view('index',['records'=>$records->all()]);
     }
 }

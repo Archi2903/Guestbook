@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Record;
 
@@ -23,5 +24,11 @@ class GuestbookController extends Controller
     {
         $records= new Record;
         return view('index',['records'=>$records->all()]);
+    }
+
+    public function editRecord($id)
+    {
+        $record= new Record;
+        return view('guestbook.updateform',['record'=>$record->find($id)]);
     }
 }

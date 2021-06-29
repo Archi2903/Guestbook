@@ -11,7 +11,13 @@
                  alt="user-avatar">
             <div class="media-body">
                 <h5 class="mt-0">{{$record->name}}</h5>
-                <p>{{$record->message}} <p class="text-right">{{$record->updated_at}}</p></p>
+                <p>{{$record->message}}
+                <p class="text-right">{{$record->updated_at}}
+                    <a href="{{route('edit',$record->id)}}">
+                        <button class="btn btn-dark"><i class="bi bi-pencil"></i></button>
+                    </a>
+                </p>
+                </p>
             </div>
         </div>
     @endforeach

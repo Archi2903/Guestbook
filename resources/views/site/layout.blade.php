@@ -20,6 +20,8 @@
     <!--    Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Noto+Sans+HK&display=swap" rel="stylesheet">
+    {{--    Link CSS--}}
+    <link rel="stylesheet" href="/css/app.css">
     <title> @yield('title') </title>
 </head>
 <!-- head -->
@@ -33,9 +35,12 @@
                 <m class="navbar-brand"><i class="bi bi-vector-pen" style="font-size: 1.5rem"></i></i>Guestbook</m>
                 <div class="collapse navbar-collapse">
                     <ul class=" navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('main')}}">Main</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('about')}}">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('contact')}}">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('main')}}">Main</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('about')}}">About</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger"
+                                                href="{{route('contact')}}">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -63,7 +68,8 @@
 
 <footer>
     <div class="row ">
-        <p class="col-12 text-center"> cover by @rchi<i class="bi bi-mouse-fill"></i><i class="bi bi-music-player-fill"></i></p>
+        <p class="col-12 text-center"> cover by @rchi<i class="bi bi-mouse-fill"></i><i
+                class="bi bi-music-player-fill"></i></p>
     </div>
 </footer>
 <!-- footer -->

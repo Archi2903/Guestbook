@@ -25,9 +25,7 @@
     <title> @yield('title') </title>
 </head>
 <!-- head -->
-@push('scripts')
-    <script></script>
-@endpush
+
 <body class="container-sm bg-light">
 
 <header class="bg-dark">
@@ -75,7 +73,7 @@
     </div>
 </footer>
 <!-- footer -->
-
+@stack('scripts')
 </body>
 <!-- body -->
 </html>

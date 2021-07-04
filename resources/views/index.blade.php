@@ -2,10 +2,20 @@
 @section('title')
     Guestbook
 @endsection
+
+@section('content_javascript')
+    <button class="btn btn-dark"><i class="bi bi-sun-fill"></i></button>
+{{--    <div class="white-theme  ">--}}
+{{--        <h4>Content JavaScript</h4>--}}
+{{--        <p class="text text-black text-red">Hello World!</p>--}}
+{{--        <button class="btn btn-dark"><i class="bi bi-sun-fill"></i></button>--}}
+{{--    </div>--}}
+@endsection
+
 @section('main_content')
     @foreach($records as $record)
         <br>
-        <div class="media border">
+        <div class="media border form">
             <img src="https://image.flaticon.com/icons/png/512/1077/1077114.png" style="height:64px "
                  class="mr-3 rounded-circle border"
                  alt="user-avatar">

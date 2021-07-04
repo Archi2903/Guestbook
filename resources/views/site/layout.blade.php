@@ -26,7 +26,7 @@
 </head>
 <!-- head -->
 
-<body class="container-sm bg-light">
+<body class="container-sm">
 
 <header class="bg-dark">
     <div class="container-fluid">
@@ -53,27 +53,44 @@
 </header>
 <!-- header -->
 
-<main>
+<main class="theme-dark theme-white">
     <div class="row ">
         <div class="col-sm-1">
         </div>
         <div class="col-sm-10">
-            @yield('main_content')
+            @yield('content_javascript')
         </div>
         <div class="col-sm-1">
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            @yield('main_content')
+        </div>
+        <div class="col-sm-2">
         </div>
     </div>
 </main>
 <!-- main -->
 
 <footer>
-    <div class="row ">
+    <div class="row">
         <p class="col-12 text-center"> cover by @rchi<i class="bi bi-mouse-fill"></i><i
                 class="bi bi-music-player-fill"></i></p>
     </div>
 </footer>
 <!-- footer -->
 @stack('scripts')
+<script src="{{mix('/js/app.js')}}"></script>
+<script>
+    let theme = document.querySelector('.theme-white');
+    let button = document.querySelector('button');
+    button.onclick = function () {
+        theme.classList.toggle('theme-white');
+    }
+</script>
 </body>
 <!-- body -->
 </html>

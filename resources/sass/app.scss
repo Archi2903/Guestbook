@@ -1,9 +1,21 @@
-
-
 //
 
 main {
-    background-color: #3b3a3a;
-    color: #e0cb48;
+    color: #000000;
 }
 
+.theme-dark {
+    background-color: rgb(69, 69, 69);
+}
+
+.theme-white {
+    background-color: rgba(175, 174, 174, 0.52);
+}
+
+.text-black {
+    color: black;
+}
+
+.text-red {
+    color: red;
+}

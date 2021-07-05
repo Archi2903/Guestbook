@@ -2,19 +2,17 @@ main {
   color: #000000;
 }
 
+.form {
+  border: 4px groove;
+}
+
+.theme {
+  background-color: #d4d4d4;
+  color: #262525;
+}
+
 .theme-dark {
-  background-color: #454545;
-}
-
-.theme-white {
-  background-color: rgba(175, 174, 174, 0.52);
-}
-
-.text-black {
-  color: black;
-}
-
-.text-red {
-  color: red;
+  background-color: #262525;
+  color: rgba(245, 209, 63, 0.68);
 }
 

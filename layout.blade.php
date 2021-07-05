@@ -53,7 +53,7 @@
 </header>
 <!-- header -->
 
-<main class="theme">
+<main class="theme-dark theme-white">
     <div class="row ">
         <div class="col-sm-1">
         </div>
@@ -85,10 +85,10 @@
 @stack('scripts')
 <script src="{{mix('/js/app.js')}}"></script>
 <script>
-    let theme = document.querySelector('.theme');
+    let theme = document.querySelector('.theme-white');
     let button = document.querySelector('button');
     button.onclick = function () {
-        theme.classList.toggle('theme-dark');
+        theme.classList.toggle('theme-white');
     }
 </script>
 </body>

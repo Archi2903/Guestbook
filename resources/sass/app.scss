@@ -4,18 +4,21 @@ main {
     color: #000000;
 }
 
+.form {
+    border: 4px groove;
+}
+
+.theme {
+    background-color: rgb(212, 212, 212);
+    color: #262525;
+
+}
+
 .theme-dark {
-    background-color: rgb(69, 69, 69);
+    background-color: rgb(38, 37, 37);
+    color: rgba(245, 209, 63, 0.68);
 }
 
-.theme-white {
-    background-color: rgba(175, 174, 174, 0.52);
-}
+.likes {
 
-.text-black {
-    color: black;
-}
-
-.text-red {
-    color: red;
 }

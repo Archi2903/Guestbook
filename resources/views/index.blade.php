@@ -5,16 +5,22 @@
 
 @section('content_javascript')
     <button class="btn btn-dark"><i class="bi bi-sun-fill"></i></button>
-    <l class="likes bi bi-heart bi-heart-fill"></l>
+    <l class="likes bi bi-heart bi-heart-fill" aria-pressed="true"></l>
 @endsection
 @push('scripts')
     <script>
         let likes = document.querySelector('.likes');
         let likebutton = document.querySelector('l');
-        let counter = 0
+
         likebutton.onclick = function () {
-            counter++;
-            likes.textContent = counter;
+            // console.log(likes.classList.contains('bi-heart'));
+            if (likes.classList.contains('bi-heart')) {
+                likes.textContent++;
+            } else {
+                likes.textContent--;
+            }
+            // counter++;
+            // likes.textContent = counter;
             likes.classList.toggle('bi-heart');
         }
 

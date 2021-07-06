@@ -1,3 +1,4 @@
+1
 @extends('site.layout')
 @section('title')
     Guestbook
@@ -13,6 +14,7 @@
         let likebutton = document.querySelector('l');
         let counter = 0
         likebutton.onclick = function () {
+            counter++;
             likes.textContent = counter;
             likes.classList.toggle('bi-heart');
         }

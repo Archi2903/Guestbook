@@ -1,4 +1,3 @@
-1
 @extends('site.layout')
 @section('title')
     Guestbook

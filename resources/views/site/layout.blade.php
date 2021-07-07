@@ -32,15 +32,15 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand navbar-dark">
             <div class="container">
-                <m class="navbar-brand"><i class="bi bi-vector-pen" style="font-size: 1.5rem"></i></i>Guestbook</m>
+                <m class="navbar-brand"><i class="bi bi-vector-pen" style="font-size: 1.5rem"></i>Guestbook</m>
                 <div class="collapse navbar-collapse">
                     <ul class=" navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('main')}}">Main</a>
                         </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('about')}}">About</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger"
-                                                href="{{route('contact')}}">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('contact')}}">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{route('tasks')}}">Task</a></li>
                     </ul>
                 </div>
             </div>

@@ -8,7 +8,7 @@
         <h1>Tasks</h1>
         <ol class="list-tasks">
             @foreach($tasks as $task)
-            <li>{{$task->tasks}}</li>
+                <li>{{$task->tasks}}</li>
             @endforeach
         </ol>
 
@@ -21,8 +21,16 @@
 @endsection
 @push('scripts')
     <script>
-        let listTasks = document.querySelector('.list-tasks');
-        let taskInput = document.querySelector('.task-input');
+        var a = 'Hello\' world\'jhjhkj';
+        var b = 3 * 3;
+        var b = b - 8;
+
+        console.log(b)
+        console.log(a)
+
+        const pi = 3.14
+        // let listTasks = document.querySelector('.list-tasks');
+        // let taskInput = document.querySelector('.task-input');
 
 
     </script>

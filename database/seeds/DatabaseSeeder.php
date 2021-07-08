@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        DB::table('users')->insert([
+            'name' =>rand(5,9),
+            'email' => rand(4,100).'@gmail.com',
+            'password' => bcrypt('secret'),
+        ]);
+//         $this->call(UsersTableSeeder::class);
+//         $this->call(RecordsTableSeeder::class);
     }
 }

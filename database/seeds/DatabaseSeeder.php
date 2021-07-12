@@ -1,24 +1,23 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
         DB::table('users')->insert([
-            'name' =>rand(5,9),
-            'email' => rand(4,100).'@gmail.com',
-            'password' => bcrypt('secret'),
-        ]);
-//         $this->call(UsersTableSeeder::class);
-//         $this->call(RecordsTableSeeder::class);
+            'name' => Str::random(10),
+            'email' => Str::random(10) . '@gmail.com',
+            'password' => Hash::make('password'),]);
+
     }
 }

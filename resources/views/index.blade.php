@@ -5,7 +5,7 @@
 
 @section('content_javascript')
     <button class="btn btn-dark"><i class="bi bi-sun-fill"></i></button>
-    <l class="likes bi bi-heart bi-heart-fill" aria-pressed="true"></l>
+    {{--    <l class="likes bi bi-heart bi-heart-fill" aria-pressed="true"></l>--}}
 @endsection
 @push('scripts')
     <script>
@@ -34,9 +34,10 @@
                  class="mr-3 rounded-circle border"
                  alt="user-avatar">
             <div class="media-body">
-                <h5 class="mt-0">{{$record->name}}</h5>
+                <h5 class="mt-0">{{$record->name}} <l class="text-right likes bi bi-heart bi-heart-fill" aria-pressed="true"></l></h5>
                 <p>{{$record->message}}
                 <p class="text-right">{{$record->updated_at}}
+
                     <a href="{{route('editRecord',$record->id)}}">
                         <button class="btn btn-dark"><i class="bi bi-pencil"></i></button>
                     </a>

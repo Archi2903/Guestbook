@@ -8,10 +8,16 @@
         <h1>Tasks</h1>
         <ol class="list-tasks">
             @foreach($tasks as $task)
-                <li>{{$task->tasks}}</li>
+                <li>{{$task->tasks}} <a href="{{route('deleteTask',$task->id)}}">
+                        <button class=" btn-dark "><i class="bi bi-trash-fill"></i></button>
+                    </a> </li>
             @endforeach
         </ol>
-
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{session('success')}}
+            </div>
+        @endif
         <form action="{{route('taskForm')}}" class="form-task" method="post">
             @csrf
             <input type="text" class="task-input" id="tasks" name="tasks">

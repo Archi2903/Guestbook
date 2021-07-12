@@ -15,5 +15,6 @@ Route::post('/guestbook/form/{id}/editform', 'GuestbookController@editFormSub')-
 Route::get('/guestbook/form/{id}/delete', 'GuestbookController@deleteRecord')->name('deleteRecord');
 
 Route::post('/tasks/form', 'TaskController@formTask')->name('taskForm');
+Route::get('/tasks/form/{id}/delete', 'TaskController@deleteTask')->name('deleteTask');
 
 

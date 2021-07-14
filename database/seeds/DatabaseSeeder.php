@@ -12,8 +12,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(RecordSeeder::class);
-        $this->call(TaskSeeder::class);
+//        $this->call(RecordSeeder::class);
+//        $this->call(TaskSeeder::class);
+        factory(App\User::class,10)->create();
+        factory(App\Record::class,10)->create();
+        factory(App\Tasks::class,3)->create();
+
     }
 }
 

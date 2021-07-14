@@ -36,7 +36,7 @@
             <div class="media-body">
                 <h5 class="mt-0">{{$record->name}} <l class="text-right likes bi bi-heart bi-heart-fill" aria-pressed="true"></l></h5>
                 <p>{{$record->message}}
-                <p class="text-right">{{$record->updated_at}}
+                <p class="text-right">{{$record->created_at->format('Y-m-d H:m')}}
 
                     <a href="{{route('editRecord',$record->id)}}">
                         <button class="btn btn-dark"><i class="bi bi-pencil"></i></button>
